@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="/styles/balloons.css" />
+  </head>
+  <body>
+    
+    
+   
+    <h1>Balloons Ltd.</h1>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about-us.html">About us</a></li>
+      <li><a href="contact-us.html">Contact us</a></li>
+    </ul>
+
+    <h2>Contact Us</h2>
+
+    <p>
+      We make bespoke balloons of all shapes and sizes, for all occasions and
+      purposes.
+    </p>
+
+    Please feel free to
+    <a href="mailto:balloons@example.com">send us an email</a> if you would like
+    to know more about our products
+<p>
+    <form action="process.php">
+        <div class="form-control">
+        <label for="fullname">Your full name</label>
+        <input id="fullname" type="text" name="fullname" />
+        </div>
+
+        <div class="form-control">
+        <label for="sername">Your full sername</label>
+        <input id="sername" type="text" name="sername" />
+        </div>
+
+        <div class="form-control">
+        <label for="email">Your Email</label>
+        <input id="email" type="text" name="email" />
+        </div>
+
+        <div class="form-control">
+        <label for="age">Your age</label>
+        <input id="age" type="number" name="age" min="18" max="99"/>
+        </div>
+
+        <div class="form-control">
+        <label for="story">Tell us more detail/label>
+        <textarea id="story" type="story">
+        </textarea>
+        </div>
+        <dialog id="d">
+          <form method="dialog">
+            <p>Thank you for your e-mail!</p>
+            <p>We will contact you soon!</p>
+           
+          </form>
+          <button onclick="d.close()">close</button>
+        </dialog>
+        <button onclick="d.showModal()">Go </button>
+        
+        
+      </form>
+</p>
+<script>
+  const trigger = document.querySelector(".trigger");
+  const target = document.querySelector(".target");
+
+  trigger.addEventListener("click", changeTarget);
+
+  function changeTarget() {
+    target.classList.toggle("active-target");
+  }
+</script>
+  </body>
+</html>
